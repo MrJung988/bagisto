@@ -44,7 +44,7 @@ return [
         'sort'       => 5,
         'icon-class' => '',
     ], [
-        'key'        => 'catalog',
+        'key'        => 'catalog',   
         'name'       => 'admin::app.layouts.catalog',
         'route'      => 'admin.catalog.products.index',
         'sort'       => 3,

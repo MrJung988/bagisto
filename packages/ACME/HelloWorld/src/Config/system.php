@@ -1,6 +1,9 @@
 <?php
 
 return [
+    /**
+     * HelloWorld
+     */
     [
         'key' => 'helloworld',
         'name' => 'Hello World',

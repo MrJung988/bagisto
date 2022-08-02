@@ -14,7 +14,7 @@
             'key' => 'helloworld',
             'name' => 'HelloWorld',
             'route' => 'helloworld.admin.index',
-            'sort' => 0
+            'sort' => 1
         ],[
             'key'        => 'helloworld.item-1',
             'name'       => 'Hello World',

@@ -5,7 +5,7 @@ return [
         'key' => 'helloworld',
         'name' => 'Hello World',
         'route' => 'helloworld.admin.index',
-        'sort' => 0,
+        'sort' => 1,
         'icon-class' => 'temp-icon',
     ], [
         'key'        => 'helloworld.item 1',
