@@ -230,6 +230,8 @@ return [
          * HelloWorld Package Service Providers.
          */ 
         ACME\HelloWorld\Providers\HelloWorldServiceProvider::class,
+        ACME\FedEx\Providers\FedExServiceProvider::class,
+        ACME\Stripe\Providers\StripeServiceProvider::class,
 
 
         /*

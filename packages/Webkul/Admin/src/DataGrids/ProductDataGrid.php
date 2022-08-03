@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\DB;
 use Webkul\Core\Models\Channel;
 use Webkul\Core\Models\Locale;
 use Webkul\Ui\DataGrid\DataGrid;
+use Webkul\Ui\DataGrid\Traits\ProvideDataGridPlus;
 
 class ProductDataGrid extends DataGrid
 {

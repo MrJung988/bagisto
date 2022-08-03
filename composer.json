@@ -106,7 +106,10 @@
             "Webkul\\Marketing\\": "packages/Webkul/Marketing/src",
             "Webkul\\Notification\\": "packages/Webkul/Notification/src",
             "Webkul\\Sitemap\\": "packages/Webkul/Sitemap/src",
-            "ACME\\HelloWorld\\": "packages/ACME/HelloWorld/src"
+            "ACME\\HelloWorld\\": "packages/ACME/HelloWorld/src",
+            "ACME\\FedEx\\": "packages/ACME/FedEx/src",
+            "ACME\\Stripe\\": "packages/ACME/Stripe/src",
+            "ACME\\TestPackage\\": "packages/ACME/TestPackage/src"
         }
     },
     "autoload-dev": {
