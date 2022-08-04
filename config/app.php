@@ -232,6 +232,8 @@ return [
         ACME\HelloWorld\Providers\HelloWorldServiceProvider::class,
         ACME\FedEx\Providers\FedExServiceProvider::class,
         ACME\Stripe\Providers\StripeServiceProvider::class,
+        ACME\TestPackage\Providers\TestPackageServiceProvider::class,
+        ACME\DataGrid\Providers\DataGridServiceProvider::class,
 
 
         /*

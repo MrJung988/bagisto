@@ -17,6 +17,7 @@
         </div>
 
         <div class="page-content">
+            <datagrid-plus src="{{ route('admin.catalog.products.index') }}"></datagrid-plus>
         </div>
     </div>
 

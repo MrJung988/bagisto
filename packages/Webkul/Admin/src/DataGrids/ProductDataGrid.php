@@ -10,6 +10,7 @@ use Webkul\Ui\DataGrid\Traits\ProvideDataGridPlus;
 
 class ProductDataGrid extends DataGrid
 {
+    use ProvideDataGridPlus;
     /**
      * Default sort order of datagrid.
      *

@@ -109,7 +109,8 @@
             "ACME\\HelloWorld\\": "packages/ACME/HelloWorld/src",
             "ACME\\FedEx\\": "packages/ACME/FedEx/src",
             "ACME\\Stripe\\": "packages/ACME/Stripe/src",
-            "ACME\\TestPackage\\": "packages/ACME/TestPackage/src"
+            "ACME\\TestPackage\\": "packages/ACME/TestPackage/src",
+            "ACME\\DataGrid\\": "packages/ACME/DataGrid/src"
         }
     },
     "autoload-dev": {
