@@ -28,5 +28,6 @@ class EventServiceProvider extends ServiceProvider
     public function boot()
     {
         parent::boot();
+        Event::listen('checkout.order.save.after', 'Webkul\Admin\Listeners\Order@sendNewOrderMail');
     }
 }

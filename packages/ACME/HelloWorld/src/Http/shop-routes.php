@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
 Route::group([
         'prefix'     => 'helloworld',
         'middleware' => ['web', 'theme', 'locale', 'currency']
