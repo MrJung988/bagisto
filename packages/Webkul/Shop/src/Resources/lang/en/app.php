@@ -25,6 +25,8 @@ return [
         'page-title'          => config('app.name') . ' - Home',
         'featured-products'   => 'Featured Products',
         'new-products'        => 'New Products',
+        'popular-products'    => 'Popular Products',
+        'old-products'        => 'Old Products',
         'verify-email'        => 'Verify your email account',
         'resend-verify-email' => 'Resend Verification Email',
     ],

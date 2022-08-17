@@ -409,6 +409,69 @@ class ProductRepository extends Repository
         return $results;
     }
 
+
+    // /**
+    //  * Returns Popular product.
+    //  *
+    //  * @return \Illuminate\Support\Collection
+    //  */
+    // public function getPopularProducts()
+    // {
+    //     $count = core()->getConfigData('catalog.products.homepage.no_of_popular_product_homepage');
+
+    //     $results = app(ProductFlatRepository::class)->scopeQuery(function ($query) {
+    //         $channel = core()->getRequestedChannelCode();
+
+    //         $locale = core()->getRequestedLocaleCode();
+
+    //         return $query->distinct()
+    //             ->addSelect('product_flat.*')
+    //             ->where('product_flat.status', 1)
+    //             ->where('product_flat.visible_individually', 1)
+    //             ->where('product_flat.popular_products', 1)
+    //             ->where('product_flat.channel', $channel)
+    //             ->where('product_flat.locale', $locale)
+    //             ->inRandomOrder();
+    //     })->paginate($count ? $count : 4);
+
+    //     return $results;
+    // }
+
+
+
+
+    //  /**
+    //  * Returns Old product.
+    //  *
+    //  * @return \Illuminate\Support\Collection
+    //  */
+    // public function getOldProducts()
+    // {
+    //     $count = core()->getConfigData('catalog.products.homepage.no_of_old_product_homepage');
+
+    //     $results = app(ProductFlatRepository::class)->scopeQuery(function ($query) {
+    //         $channel = core()->getRequestedChannelCode();
+
+    //         $locale = core()->getRequestedLocaleCode();
+
+    //         return $query->distinct()
+    //             ->addSelect('product_flat.*')
+    //             ->where('product_flat.status', 1)
+    //             ->where('product_flat.visible_individually', 1)
+    //             ->where('product_flat.old_product', 1)
+    //             ->where('product_flat.channel', $channel)
+    //             ->where('product_flat.locale', $locale)
+    //             ->inRandomOrder();
+    //     })->paginate($count ? $count : 4);
+
+    //     return $results;
+    // }
+
+
+
+
+
+
     /**
      * Returns product's super attribute with options.
      *
