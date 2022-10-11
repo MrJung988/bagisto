@@ -82,7 +82,12 @@ class ThreeAdvertisementController extends Controller
     }
 
     public function deleteImage($id){
-        HelloWorld:: destroy($id);
+        $banner_details = HelloWorld:: find($id);
+        $destination = 'images/advertisement_banner/ThreeAdsBanner/'.$banner_details->image;
+        if(File::exists($destination)){
+            File::delete($destination);
+        }
+        $banner_details->delete();
         return redirect()->route('helloworld.admin.three-advertisement');
     }
 }

@@ -33,6 +33,9 @@
 
         .imageTable{
             object-fit: cover;
+            cursor: pointer;
+            border: 1px solid;
+            border-radius: 5px;
         }
     </style>
 @endpush
@@ -77,7 +80,7 @@
                                 <td>{{ $image->banner_hyperlink}}</td>
                                 <!-- <td>{{ $image->image}}</td> -->
                                 <td>
-                                    <img src="{{ asset('images/advertisement_banner/FourAdsBanner/'.$image->image) }}" alt="" width="100px" height="100px" class="imageTable">
+                                    <img src="{{ asset('images/advertisement_banner/FourAdsBanner/'.$image->image) }}" alt="" width="150px" height="150px" class="imageTable">
                                 </td>
                                 <td>
                                     <a href="{{ url('admin/helloworld/edit_four_image', $image->id) }}"><button class="btn editButton">Edit</button></a> 

@@ -64,11 +64,13 @@
                             <div class="title">
                                 <label>Add Banner Title <span class="required">*</span></label><br>
                                 <input class="form-control" name="banner_title" type="text">
+                                <span class="text-danger small">@error('banner_title') {{$message}} @enderror</span>
                             </div>
 
                             <div class="image">
                                 <label>Add Banner Image <span class="required">*</span></label><br>
                                 <input class="form-control" name="image" type="file">
+                                <span class="text-danger small">@error('image') {{$message}} @enderror</span>
                             </div>                                    
                             <div class="type">
                                 <label>Banner Type:</label><br>
@@ -77,6 +79,7 @@
                             <div class="hyperlink">
                                 <label>Add Banner Hyperlink <span class="required">*</span></label><br>
                                 <input class="form-control" name="banner_hyperlink" type="text">
+                                <span class="text-danger small">@error('banner_hyperlink') {{$message}} @enderror</span>
                             </div>
                             <div class="submit d-flex justify-content-center">
                                 <button class="btn btn-primary" type="submit">Add Image</button>

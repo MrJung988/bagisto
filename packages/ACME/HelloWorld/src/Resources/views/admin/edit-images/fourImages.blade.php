@@ -38,6 +38,9 @@
         }
         .imageTable{
             object-fit: cover;
+            cursor: pointer;
+            border: 1px solid;
+            border-radius: 5px;
         }
     </style>
 @endpush
@@ -73,7 +76,7 @@
                             <div class="image">
                                 <label>Add Banner Image <span class="required">*</span></label><br>
                                 <input class="form-control" name="image" type="file"><br>
-                                <img src="{{ asset('images/advertisement_banner/FourAdsBanner/'.$values->image) }}" alt="" width="100px" height="100px" class="imageTable">
+                                <img src="{{ asset('images/advertisement_banner/FourAdsBanner/'.$values->image) }}" alt="" width="150px" height="150px" class="imageTable">
                             </div>                                    
                             <div class="type">
                                 <label>Banner Type:</label><br>
