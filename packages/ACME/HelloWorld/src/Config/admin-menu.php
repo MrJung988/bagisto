@@ -4,26 +4,33 @@ return [
     [
         'key' => 'helloworld',
         'name' => 'Hello World',
-        'route' => 'helloworld.admin.index',
-        'sort' => 1,
-        'icon-class' => 'temp-icon',
-    ], [
+        'route' => 'helloworld.admin.one-advertisement',
+        'sort' => 2,
+        'icon-class' => 'dashboard-icon',
+    ],[
         'key'        => 'helloworld.item 1',
-        'name'       => 'Hello World Item 1',
-        'route'      => 'helloworld.admin.index',
+        'name'       => 'Add One Advertisement',
+        'route'      => 'helloworld.admin.one-advertisement',
         'sort'       => 1,
         'icon-class' => '',
-    ], [
-        'key'        => 'helloworld.item-2',
-        'name'       => 'Hello World Item 2',
-        'route'      => 'helloworld.admin.index',
+    ], 
+    [
+        'key'        => 'helloworld.item 2',
+        'name'       => 'Add Two Advertisement',
+        'route'      => 'helloworld.admin.two-advertisement',
         'sort'       => 2,
         'icon-class' => '',
     ], [
         'key'        => 'helloworld.item-3',
-        'name'       => 'Hello World Item 3',
-        'route'      => 'helloworld.admin.index',
+        'name'       => 'Add Three Advertisement',
+        'route'      => 'helloworld.admin.three-advertisement',
         'sort'       => 3,
+        'icon-class' => '',
+    ], [
+        'key'        => 'helloworld.item-4',
+        'name'       => 'Add Four Advertisement',
+        'route'      => 'helloworld.admin.four-advertisement',
+        'sort'       => 4,
         'icon-class' => '',
     ],
 ];

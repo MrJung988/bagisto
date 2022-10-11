@@ -7,5 +7,7 @@ use ACME\HelloWorld\Contracts\HelloWorld as HelloWorldContract;
 
 class HelloWorld extends Model implements HelloWorldContract
 {
-    protected $fillable = [];
+    protected $table = 'advertisement_banner';
+
+    protected $guarded = [];
 }

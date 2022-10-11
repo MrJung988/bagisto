@@ -373,7 +373,7 @@
                 </div>
             </accordian>
         </form>
-    </div>
+    </div>          
 @stop
 
 @push('scripts')

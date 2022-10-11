@@ -30,5 +30,10 @@
             'name'       => 'Hello World',
             'route'      => 'helloworld.admin.index',
             'sort'       => 3,
+        ], [
+            'key'        => 'helloworld.item-4',
+            'name'       => 'Hello World',
+            'route'      => 'helloworld.admin.index',
+            'sort'       => 4,
         ],
 ];

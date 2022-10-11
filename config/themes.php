@@ -32,7 +32,7 @@ return [
         ],
     ],
 
-    'admin-default' => 'theme1',
+    'admin-default' => 'default',
 
     'admin-themes' => [
         'default' => [
