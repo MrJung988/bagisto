@@ -7,6 +7,7 @@ use ACME\HelloWorld\Models\HelloWorld;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Validator;
+use Intervention\Image\Facades\Image;
 
 class TwoAdvertisementController extends Controller
 {
@@ -23,7 +24,6 @@ class TwoAdvertisementController extends Controller
 
     public function storeTwoImage(Request $request)
     {
-        // dd($request->all());
         $attributes = $request->validate([
             'banner_title' => 'required',
             'image' => 'required',
@@ -31,14 +31,26 @@ class TwoAdvertisementController extends Controller
             'banner_hyperlink' => 'required',
         ]);
 
-        // dd($attributes);
+        
+        if($request->hasFile('image')){
+            $images = $request->image;
+            $extension = $images->getClientOriginalExtension();
+            $filename = time().'.'.$extension;
 
-        $image = HelloWorld::create($attributes);
+            Image:: make($images)->save(public_path('images/advertisement_banner/TwoAdsBanner/'.$filename));
+        }
+
+        $image = HelloWorld::create([
+            'banner_title' => $request->banner_title,
+            'image' => $filename,
+            'banner_type' => $request->banner_type,
+            'banner_hyperlink' => $request->banner_hyperlink,
+        ]);
         if($image){
             return redirect()->route('helloworld.admin.two-advertisement');
         }else{
             return back();
-        }        
+        }
     }
 
     public function editImage($id)

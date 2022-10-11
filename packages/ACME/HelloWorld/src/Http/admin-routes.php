@@ -38,7 +38,7 @@ Route::group([
         Route::post('/add_three_images', [ThreeAdvertisementController::class, 'storeThreeImage'])->name('helloworld.admin.addimages.storeThreeImage');
         Route::get('/edit_three_image/{id}', [ThreeAdvertisementController::class, 'editImage'])->name('helloworld.admin.editimages.threeimages');
         Route::put('/edit_three_image/{id}', [ThreeAdvertisementController::class, 'updateImage'])->name('helloworld.admin.updateImage.threeimages');
-        Route::get('/delete_three_image/{id}', [TwoAdvertisementController::class, 'deleteImage'])->name('helloworld.admin.deleteImage.threeimages');
+        Route::get('/delete_three_image/{id}', [ThreeAdvertisementController::class, 'deleteImage'])->name('helloworld.admin.deleteImage.threeimages');
 
 
         Route::get('/four', [FourAdvertisementController::class, 'index'])->name('helloworld.admin.four-advertisement');
@@ -46,7 +46,7 @@ Route::group([
         Route::post('/add_four_images', [FourAdvertisementController::class, 'storeFourImage'])->name('helloworld.admin.addimages.storeFourImage');
         Route::get('/edit_four_image/{id}', [FourAdvertisementController::class, 'editImage'])->name('helloworld.admin.editimages.fourimages');
         Route::put('/edit_four_image/{id}', [FourAdvertisementController::class, 'updateImage'])->name('helloworld.admin.updateImage.fourimages'); 
-        Route::get('/delete_four_image/{id}', [TwoAdvertisementController::class, 'deleteImage'])->name('helloworld.admin.deleteImage.fourimages');
+        Route::get('/delete_four_image/{id}', [FourAdvertisementController::class, 'deleteImage'])->name('helloworld.admin.deleteImage.fourimages');
 
 
 });

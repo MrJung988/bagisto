@@ -7,6 +7,7 @@ use ACME\HelloWorld\Models\HelloWorld;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\Validator;
+use Intervention\Image\Facades\Image;
 
 class ThreeAdvertisementController extends Controller
 {
@@ -23,7 +24,7 @@ class ThreeAdvertisementController extends Controller
 
     public function storeThreeImage(Request $request)
     {
-        // dd($request);
+        // dd($request->all());
         $attributes = $request->validate([
             'banner_title' => 'required',
             'image' => 'required',
@@ -31,14 +32,26 @@ class ThreeAdvertisementController extends Controller
             'banner_hyperlink' => 'required',
         ]);
 
-        // dd($attributes);
+        
+        if($request->hasFile('image')){
+            $images = $request->image;
+            $extension = $images->getClientOriginalExtension();
+            $filename = time().'.'.$extension;
 
-        $image = HelloWorld::create($attributes);
+            Image:: make($images)->save(public_path('images/advertisement_banner/ThreeAdsBanner/'.$filename));
+        }
+
+        $image = HelloWorld::create([
+            'banner_title' => $request->banner_title,
+            'image' => $filename,
+            'banner_type' => $request->banner_type,
+            'banner_hyperlink' => $request->banner_hyperlink,
+        ]);
         if($image){
             return redirect()->route('helloworld.admin.three-advertisement');
         }else{
             return back();
-        } 
+        }
     }
 
     public function editImage($id)

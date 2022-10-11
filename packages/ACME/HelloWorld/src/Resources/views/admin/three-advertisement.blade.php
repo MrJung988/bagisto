@@ -31,6 +31,10 @@
         .deleteButton{
             background-color: red;
         }
+
+        .imageTable{
+            object-fit: cover;
+        }
     </style>
 @endpush
 
@@ -72,7 +76,10 @@
                                 <td>{{ $image->banner_title}}</td>
                                 <td>{{ $image->banner_type}}</td>
                                 <td>{{ $image->banner_hyperlink}}</td>
-                                <td>{{ $image->image}}</td>
+                                <!-- <td>{{ $image->image}}</td> -->
+                                <td>
+                                    <img src="{{ asset('images/advertisement_banner/ThreeAdsBanner/'.$image->image) }}" alt="" width="100px" height="100px" class="imageTable">
+                                </td>
                                 <td>
                                     <a href="{{ url('admin/helloworld/edit_three_image', $image->id) }}"><button class="btn editButton">Edit</button></a> 
                                     <a href="{{ url('admin/helloworld/delete_three_image', $image->id) }}"><button class="btn deleteButton">Delete</button></a>
