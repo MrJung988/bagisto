@@ -73,8 +73,8 @@
                                 <td>{{ $image->banner_hyperlink}}</td>
                                 <td>{{ $image->image}}</td>
                                 <td>
-                                    <button class="btn editButton"><a href="{{ route('helloworld.admin.editimages.fourimages') }}" >Edit</a></button>
-                                    <button class="btn deleteButton"><a href="" >Delete</a></button>
+                                    <a href="{{ url('admin/helloworld/edit_four_image', $image->id) }}"><button class="btn editButton">Edit</button></a> 
+                                    <a href="{{ url('admin/helloworld/delete_four_image', $image->id) }}"><button class="btn deleteButton">Delete</button></a>
                                 </td>
                             </tr>
                             @php

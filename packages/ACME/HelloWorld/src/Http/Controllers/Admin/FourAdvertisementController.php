@@ -40,4 +40,26 @@ class FourAdvertisementController extends Controller
             return back();
         } 
     }
+
+    public function editImage($id)
+    {
+        $values = HelloWorld:: find($id);
+        return view('helloworld::admin.edit-images.fourImages', ['values'=> $values]);
+    }
+
+    public function updateImage(Request $request, $id){
+        $values = HelloWorld:: find($id);
+            $values-> banner_title = $request->banner_title;
+            $values-> image = $request->image;
+            $values-> banner_type = $request->banner_type;
+            $values-> banner_hyperlink = $request->banner_hyperlink;
+            $values-> save();
+
+            return redirect()->route('helloworld.admin.four-advertisement');
+    }
+
+    public function deleteImage($id){
+        HelloWorld:: destroy($id);
+        return redirect()->route('helloworld.admin.four-advertisement');
+    }
 }

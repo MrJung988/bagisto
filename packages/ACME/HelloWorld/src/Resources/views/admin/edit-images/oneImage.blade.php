@@ -57,8 +57,9 @@
         
         <div class="page-content">
             <div slot="body" class="body_content">
-                <form action="{{ route('helloworld.admin.addimages.storeOneImage') }}" method="POST" enctype="multipart/form-data">
+                <form action="" method="POST" enctype="multipart/form-data">
                     @csrf
+                    @method("PUT")
                     <div class="container">
                         <div class="row">
                             <div class="title">
@@ -68,7 +69,7 @@
 
                             <div class="image">
                                 <label>Add Banner Image <span class="required">*</span></label><br>
-                                <input class="form-control" name="image" type="file" value="{{$values->image}}">
+                                <input class="form-control" name="image" type="file">
                             </div>                                    
                             <div class="type">
                                 <label>Banner Type:</label><br>

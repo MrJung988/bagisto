@@ -50,12 +50,17 @@ class OneAdvertisementController extends Controller
 
     public function updateImage(Request $request, $id){
         $values = HelloWorld:: find($id);
-            $values-> title = $request->title;
+            $values-> banner_title = $request->banner_title;
             $values-> image = $request->image;
-            $values-> banne_type = $request->banne_type;
-            $values-> title = $request->title;
+            $values-> banner_type = $request->banner_type;
+            $values-> banner_hyperlink = $request->banner_hyperlink;
             $values-> save();
 
             return redirect()->route('helloworld.admin.one-advertisement');
+    }
+
+    public function deleteImage($id){
+        HelloWorld:: destroy($id);
+        return redirect()->route('helloworld.admin.one-advertisement');
     }
 }

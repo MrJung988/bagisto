@@ -2,7 +2,7 @@
 <!-- Bootstrap CDN -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 @section('page_title')
-    Add Three Advertisement
+    Edit One Advertisement
 @stop
 
 @push('css')
@@ -46,24 +46,25 @@
         <div class="page-header">
             <div class="page-title">
                 <h1>
-                    <i onclick="window.location = 'http://127.0.0.1:8000/admin/helloworld/three'" class="icon angle-left-icon back-link"></i>
-                    Add Three Advertisement Banner
+                    <i onclick="window.location = 'http://127.0.0.1:8000/admin/helloworld/one'" class="icon angle-left-icon back-link"></i>
+                    Add One Advertisement Banner
                 </h1>
             </div>
 
             <div class="page-action">
             </div>
         </div>
-
+        
         <div class="page-content">
             <div slot="body" class="body_content">
-                <form action="{{ route('helloworld.admin.addimages.storeThreeImage') }}" method="POST" enctype="multipart/form-data">
+                <form action="" method="POST" enctype="multipart/form-data">
                     @csrf
+                    @method("PUT")
                     <div class="container">
                         <div class="row">
                             <div class="title">
                                 <label>Add Banner Title <span class="required">*</span></label><br>
-                                <input class="form-control" name="banner_title" type="text">
+                                <input class="form-control" name="banner_title" type="text" value="{{$values->banner_title}}">
                             </div>
 
                             <div class="image">
@@ -76,10 +77,10 @@
                             </div>
                             <div class="hyperlink">
                                 <label>Add Banner Hyperlink <span class="required">*</span></label><br>
-                                <input class="form-control" name="banner_hyperlink" type="text">
+                                <input class="form-control" name="banner_hyperlink" type="text" value="{{$values->banner_hyperlink}}">
                             </div>
                             <div class="submit d-flex justify-content-center">
-                                <button class="btn btn-primary" type="submit">Add Image</button>
+                                <button class="btn btn-primary" type="submit">Edit Image</button>
                             </div>
                         </div>
                     </div>                    
