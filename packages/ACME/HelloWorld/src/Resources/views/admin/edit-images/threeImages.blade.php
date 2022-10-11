@@ -36,6 +36,10 @@
         .required{
             color: red;
         }
+
+        .imageTable{
+            object-fit: cover;
+        }
     </style>
 @endpush
 
@@ -46,8 +50,8 @@
         <div class="page-header">
             <div class="page-title">
                 <h1>
-                    <i onclick="window.location = 'http://127.0.0.1:8000/admin/helloworld/one'" class="icon angle-left-icon back-link"></i>
-                    Add One Advertisement Banner
+                    <i onclick="window.location = 'http://127.0.0.1:8000/admin/helloworld/three'" class="icon angle-left-icon back-link"></i>
+                    Edit Three Advertisement Banner
                 </h1>
             </div>
 
@@ -69,7 +73,8 @@
 
                             <div class="image">
                                 <label>Add Banner Image <span class="required">*</span></label><br>
-                                <input class="form-control" name="image" type="file">
+                                <input class="form-control" name="image" type="file"><br>
+                                <img src="{{ asset('images/advertisement_banner/ThreeAdsBanner/'.$values->image) }}" alt="" width="100px" height="100px" class="imageTable">
                             </div>                                    
                             <div class="type">
                                 <label>Banner Type:</label><br>
