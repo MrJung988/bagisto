@@ -88,7 +88,7 @@
                                 <input class="form-control" name="banner_hyperlink" type="text" value="{{$values->banner_hyperlink}}">
                             </div>
                             <div class="submit d-flex justify-content-center">
-                                <button class="btn btn-primary" type="submit">Edit Image</button>
+                                <button class="btn btn-primary" type="submit">Update</button>
                             </div>
                         </div>
                     </div>                    

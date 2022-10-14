@@ -9,7 +9,7 @@ return [
         'icon-class' => 'dashboard-icon',
     ],[
         'key'        => 'helloworld.item 1',
-        'name'       => 'Add One Advertisement',
+        'name'       => 'Add Slider Images',
         'route'      => 'helloworld.admin.one-advertisement',
         'sort'       => 1,
         'icon-class' => '',

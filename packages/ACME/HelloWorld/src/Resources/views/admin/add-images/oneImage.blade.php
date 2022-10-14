@@ -47,7 +47,7 @@
             <div class="page-title">
                 <h1>
                     <i onclick="window.location = 'http://127.0.0.1:8000/admin/helloworld/one'" class="icon angle-left-icon back-link"></i>
-                    Add One Advertisement Banner
+                    Add Slider Image
                 </h1>
             </div>
 

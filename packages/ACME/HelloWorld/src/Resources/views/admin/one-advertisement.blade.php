@@ -46,7 +46,7 @@
     <div class="content full-page dashboard">
         <div class="page-header">
             <div class="page-title">
-                <h1>Add One Advertisement Banner</h1>
+                <h1>Add Slider Image</h1>
             </div>
 
             <div class="page-action">
@@ -81,7 +81,7 @@
                                 <td>{{ $image->banner_hyperlink}}</td>
                                 <!-- <td>{{ $image->image}}</td> -->
                                 <td>
-                                    <img src="{{ asset('images/advertisement_banner/OneAdsBanner/'.$image->image) }}" alt="" width="150px" height="150px" class="imageTable">
+                                    <img src="{{ asset('images/advertisement_banner/OneAdsBanner/'.$image->image) }}" alt="" width="250px" height="150px" class="imageTable">
                                 </td>
                                 <td>
                                     <a href="{{ url('admin/helloworld/edit_one_image', $image->id) }}"><button class="btn editButton">Edit</button></a> 

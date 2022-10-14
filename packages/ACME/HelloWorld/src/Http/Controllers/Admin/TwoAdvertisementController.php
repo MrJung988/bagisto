@@ -15,6 +15,7 @@ class TwoAdvertisementController extends Controller
     public function index()
     {
         $images = HelloWorld::where('banner_type', 'two')->get();
+        
         return view('helloworld::admin.two-advertisement', ['images'=> $images]);
     }
 

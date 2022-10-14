@@ -54,7 +54,7 @@
             <div class="page-title">
                 <h1>
                     <i onclick="window.location = 'http://127.0.0.1:8000/admin/helloworld/one'" class="icon angle-left-icon back-link"></i>
-                    Edit One Advertisement Banner
+                    Edit Slider Image
                 </h1>
             </div>
 
@@ -77,7 +77,7 @@
                             <div class="image">
                                 <label>Add Banner Image <span class="required">*</span></label><br>
                                 <input class="form-control" name="image" type="file"><br>
-                                <img src="{{ asset('images/advertisement_banner/OneAdsBanner/'.$values->image) }}" alt="" width="150px" height="150px" class="imageTable">
+                                <img src="{{ asset('images/advertisement_banner/OneAdsBanner/'.$values->image) }}" alt="" width="250px" height="150px" class="imageTable">
                             </div>                                    
                             <div class="type">
                                 <label>Banner Type:</label><br>
@@ -88,7 +88,7 @@
                                 <input class="form-control" name="banner_hyperlink" type="text" value="{{$values->banner_hyperlink}}">
                             </div>
                             <div class="submit d-flex justify-content-center">
-                                <button class="btn btn-primary" type="submit">Edit Image</button>
+                                <button class="btn btn-primary" type="submit">Update</button>
                             </div>
                         </div>
                     </div>                    

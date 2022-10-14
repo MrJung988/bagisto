@@ -2,6 +2,7 @@
 
 namespace Webkul\Shop\Http\Controllers;
 
+use ACME\HelloWorld\Models\HelloWorld;
 use Webkul\Shop\Http\Controllers\Controller;
 use Webkul\Core\Repositories\SliderRepository;
 use Webkul\Product\Repositories\SearchRepository;
@@ -30,9 +31,14 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $oneImageBanner = HelloWorld::where('banner_type', 'one')->get();
+        $twoImageBanner = HelloWorld::where('banner_type', 'two')->get();
+        $threeImageBanner = HelloWorld::where('banner_type', 'three')->get();
+        $fourImageBanner = HelloWorld::where('banner_type', 'four')->get();
+        
         $sliderData = $this->sliderRepository->getActiveSliders();
 
-        return view($this->_config['view'], compact('sliderData'));
+        return view($this->_config['view'], compact('sliderData', 'oneImageBanner', 'twoImageBanner', 'threeImageBanner', 'fourImageBanner'));
     }
 
     /**
