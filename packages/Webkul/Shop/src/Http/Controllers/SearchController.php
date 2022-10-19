@@ -2,6 +2,8 @@
 
 namespace Webkul\Shop\Http\Controllers;
 
+use Illuminate\Http\Request;
+use Webkul\Product\Models\ProductFlat;
 use Webkul\Product\Repositories\SearchRepository;
 
 class SearchController extends Controller
@@ -27,5 +29,33 @@ class SearchController extends Controller
         $results = $this->searchRepository->search(request()->all());
 
         return view($this->_config['view'])->with('results', $results->count() ? $results : null);
+    }
+
+    public function search(Request $request)
+    {
+
+        if($request->ajax()){
+            $output = '';
+
+            $products = ProductFlat::where('name', 'LIKE', '%'.$request->term.'%')
+                                ->orWhere('price', 'LIKE', '%'.$request->term.'%')
+                                ->get();
+        
+            if($products){
+                foreach($products as $product){
+                    $output .= 
+                    '<div class="card-body">
+                    <img class="card-img-top" src="">
+                        <h5 class="card-title"><b>'.$product->name.'</b></h5>
+                        <h5 class="card-title"><b>'.$product->price.'</b></h5>
+                    </div>
+                    ';
+                }
+    
+                return response()->json($output);
+            }
+        }       
+
+        return view($this->_config['view']);
     }
 }

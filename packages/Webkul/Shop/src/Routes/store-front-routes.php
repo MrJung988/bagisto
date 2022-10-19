@@ -1,5 +1,6 @@
 <?php
 
+use FontLib\Table\Type\name;
 use Illuminate\Support\Facades\Route;
 use Webkul\CMS\Http\Controllers\Shop\PagePresenterController;
 use Webkul\Shop\Http\Controllers\HomeController;
@@ -50,6 +51,11 @@ Route::group(['middleware' => ['web', 'locale', 'theme', 'currency']], function 
     ])->name('shop.search.index');
 
     Route::post('/upload-search-image', [HomeController::class, 'upload'])->name('shop.image.search.upload');
+
+    /**
+     * Store Front live search using ajax.
+     */
+    Route::get('/live-search', [SearchController::class, 'search'])->name('shop.live-search.index');
 
     /**
      * Subscription routes.
